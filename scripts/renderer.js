@@ -5,7 +5,7 @@ class Renderer
     constructor(scale)
     {
         //display size: 64x32
-        this.cols = 64; //64 columns (lines of the x axis)
+        this.cols = 64; //64 columns (lines on the x axis)
         this.rows = 32; //32 rows (lines on the y axis)
 
 
