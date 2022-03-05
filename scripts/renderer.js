@@ -5,8 +5,8 @@ class Renderer
     constructor(scale)
     {
         //display size: 64x32
-        this.cols = 64;
-        this.rows = 32;
+        this.cols = 64; //64 columns (lines of the x axis)
+        this.rows = 32; //32 rows (lines on the y axis)
 
 
         //The following code is what lets us scale the pixels up as a 64x32 resolution is incredibly small on a modern display
@@ -23,6 +23,33 @@ class Renderer
         //an array for the display which will be a size of 64*32 or 2048
         //Each item in the array will represent a pixel and will be either on or off as CHIP-8 is black and white
         this.display = new Array(this.cols * this.rows)
+    }
+
+    //function "setPixel" will be toggling the pixels on and off
+    setPixel(x, y)
+    {
+        //code for pixels to wrap around the screen
+        //if x is greater than 64 it'll be subtracted by 64 to wrap around
+        //if x is less than 64 it'll get 64 added to it to wrap around
+        if (x > this.cols)
+        {
+            x -= this.cols;
+        }
+        else if (x < 0)
+        {
+            x += this.cols;
+        }
+
+        //if y is greater than 32 it'll be subtracted by 32 to wrap around
+        //if y is less than 32 it'll get 32 added to it to wrap around
+        if (y > this.rows)
+        {
+            y -= this.rows;
+        }
+        else if (y < 0)
+        {
+            y += this.rows;
+        }
     }
 }
 
