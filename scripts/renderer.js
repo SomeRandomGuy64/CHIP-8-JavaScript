@@ -22,7 +22,7 @@ class Renderer
 
         //an array for the display which will be a size of 64*32 or 2048
         //Each item in the array will represent a pixel and will be either on or off as CHIP-8 is black and white
-        this.display = new Array(this.cols * this.rows)
+        this.clear();
     }
 
     //function "setPixel" will be toggling the pixels on and off
@@ -60,6 +60,12 @@ class Renderer
 
         //returns a value telling us if the pixel has been erased or not
         return !this.display[pixelLoc];
+    }
+
+    //function to clear out the display by reinitializing the array
+    clear()
+    {
+        this.display = new Array(this.cols * this.rows)
     }
 }
 
