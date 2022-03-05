@@ -50,6 +50,16 @@ class Renderer
         {
             y += this.rows;
         }
+
+        //calculate pixel location
+        let pixelLoc = x + (y* this.cols);
+
+        //sprites are XOR'd onto the display
+        //the code below takes the pixel location and XORs itself with 1
+        this.display[pixelLoc] ^= 1;
+
+        //returns a value telling us if the pixel has been erased or not
+        return !this.display[pixelLoc];
     }
 }
 
