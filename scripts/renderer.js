@@ -67,6 +67,32 @@ class Renderer
     {
         this.display = new Array(this.cols * this.rows)
     }
+
+    //render function to render the pixels. Will run at 60 times per second or 60hz
+    render()
+    {
+        //clears the display every render cycle
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        //loop through the display array
+        for (let i = 0; i < this.cols * this.rows; i++)
+        {
+            //grabs the x postion of the array based of i
+            let x = (i % this.cols) * this.scale;
+            //grabs the y position of the array based of i
+            let y = Math.floor(i / this.cols) * this.scale;
+
+            //if the value at this.display[i] == 1, then draw a pixel
+            if (this.display[i])
+            {
+                //sets pixel colour to black
+                this.ctx.fillStyle = '#000';
+
+                //place a pixel at poisiotn (x,y) with a width and height scale
+                this.ctx.fillRect(x,y, this.scale, this.scale)
+            }
+        }
+    }
 }
 
 export default Renderer;
