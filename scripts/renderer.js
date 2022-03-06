@@ -95,10 +95,178 @@ class Renderer
     }
 
     //testing purposes
+    //smiley face
     testRender()
     {
-        this.setPixel(0, 0);
-        this.setPixel(5, 2);
+        //y = 1
+        this.setPixel(9,1);
+        this.setPixel(10,1);
+        this.setPixel(11,1);
+        this.setPixel(12,1);
+        this.setPixel(13,1);
+        this.setPixel(14,1);
+        this.setPixel(15,1);
+
+        //y=2
+        this.setPixel(7,2);
+        this.setPixel(8,2);
+        this.setPixel(16,2);
+        this.setPixel(17,2);
+
+        //y=3
+        this.setPixel(5,3);
+        this.setPixel(6,3);
+        this.setPixel(18,3);
+        this.setPixel(19,3);
+
+        //y=4
+        this.setPixel(4,4);
+        this.setPixel(20,4);
+
+        //y=5
+        this.setPixel(4,5);
+        this.setPixel(20,5);
+
+        //y=6
+        this.setPixel(3,6);
+        this.setPixel(5,6);
+        this.setPixel(6,6);
+        this.setPixel(7,6);
+        this.setPixel(13,6);
+        this.setPixel(14,6);
+        this.setPixel(15,6);
+        this.setPixel(16,6);
+        this.setPixel(21,6);
+
+        //y = 7
+        this.setPixel(3,7);
+        this.setPixel(4,7);
+        this.setPixel(7,7);
+        this.setPixel(8,7);
+        this.setPixel(12,7);
+        this.setPixel(15,7);
+        this.setPixel(16,7);
+        this.setPixel(17,7);
+        this.setPixel(21,7);
+
+        //y=8
+        this.setPixel(2,8);
+        this.setPixel(4,8);
+        this.setPixel(7,8);
+        this.setPixel(8,8);
+        this.setPixel(12,8);
+        this.setPixel(16,8);
+        this.setPixel(17,8);
+        this.setPixel(22,8);
+
+        //y=9
+        this.setPixel(2,9);
+        this.setPixel(4,9);
+        this.setPixel(8,9);
+        this.setPixel(12,9);
+        this.setPixel(17,9);
+        this.setPixel(22,9);
+
+        //y=10
+        this.setPixel(2,10);
+        this.setPixel(5,10);
+        this.setPixel(6,10);
+        this.setPixel(7,10);
+        this.setPixel(8,10);
+        this.setPixel(13,10);
+        this.setPixel(14,10);
+        this.setPixel(15,10);
+        this.setPixel(16,10);
+        this.setPixel(17,10);
+        this.setPixel(22,10);
+
+        //y=11
+        this.setPixel(2,11);
+        this.setPixel(22,11);
+
+        //y=12
+        this.setPixel(2,12);
+        this.setPixel(5,12);
+        this.setPixel(6,12);
+        this.setPixel(7,12);
+        this.setPixel(8,12);
+        this.setPixel(9,12);
+        this.setPixel(10,12);
+        this.setPixel(11,12);
+        this.setPixel(12,12);
+        this.setPixel(13,12);
+        this.setPixel(14,12);
+        this.setPixel(15,12);
+        this.setPixel(16,12);
+        this.setPixel(17,12);
+        this.setPixel(22,12);
+
+        //y=13
+        this.setPixel(2,13);
+        this.setPixel(6,13);
+        this.setPixel(18,13);
+        this.setPixel(22,13);
+
+        //y=14
+        this.setPixel(3,14);
+        this.setPixel(6,14);
+        this.setPixel(18,14);
+        this.setPixel(21,14);
+
+        //y=15
+        this.setPixel(3,15);
+        this.setPixel(6,15);
+        this.setPixel(13,15);
+        this.setPixel(14,15);
+        this.setPixel(15,15);
+        this.setPixel(16,15);
+        this.setPixel(17,15);
+        this.setPixel(18,15);
+        this.setPixel(21,15);
+
+        //y=16
+        this.setPixel(4,16);
+        this.setPixel(7,16);
+        this.setPixel(11,16);
+        this.setPixel(12,16);
+        this.setPixel(17,16);
+        this.setPixel(20,16);
+
+        //y=17
+        this.setPixel(4,17)
+        this.setPixel(8,17);
+        this.setPixel(10,17);
+        this.setPixel(16,17);
+        this.setPixel(20,17);
+
+        //y=18
+        this.setPixel(5,18);
+        this.setPixel(6,18);
+        this.setPixel(9,18);
+        this.setPixel(10,18);
+        this.setPixel(11,18);
+        this.setPixel(12,18);
+        this.setPixel(13,18);
+        this.setPixel(14,18);
+        this.setPixel(15,18);
+        this.setPixel(18,18);
+        this.setPixel(19,18);
+
+        //y=19
+        this.setPixel(7,19);
+        this.setPixel(8,19);
+        this.setPixel(16,19);
+        this.setPixel(17,19);
+
+        //y=20
+        this.setPixel(9,20);
+        this.setPixel(10,20);
+        this.setPixel(11,20);
+        this.setPixel(12,20);
+        this.setPixel(13,20);
+        this.setPixel(14,20);
+        this.setPixel(15,20);
+
     }
 }
 
