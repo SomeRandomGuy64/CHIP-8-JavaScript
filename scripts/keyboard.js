@@ -31,6 +31,13 @@ class Keyboard
         window.addEventListener('keydown', this.onKeyDown.bind(this), false);
         window.addEventListener('keyup', this.onKeyUp.bind(this), false);
     }
+
+    isKeyPressed(keyCode)
+    {   
+        //Will check the keysPressed array for a specified CHIP-8 keyCode
+        return this.keysPressed[keyCode];
+    }
+
 }
 
 export default Keyboard;
