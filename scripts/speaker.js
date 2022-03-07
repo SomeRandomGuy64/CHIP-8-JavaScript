@@ -31,11 +31,13 @@ class Speaker
     {
         if (this.audioCtx && !this.oscillator)
         {
+            //create an oscillator which will be playing the sound
             this.oscillator = this.audioCtx.createOscillator();
 
             //set the frequency
             this.oscillator.frequency.setValueAtTime(frequency || 440, this.audioCtx.currentTime);
 
+            //type of wave
             //square wave
             this.oscillator.type = 'square';
 
