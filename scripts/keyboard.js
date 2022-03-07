@@ -22,6 +22,7 @@ class Keyboard
             67: 0xB, //C
             86: 0xF, //V
         }
+        //array to keep track of pressed keys
         this.keysPressed = [];
 
         //Some Chip-8 instructions require waiting for the next keypress. We initialize this function elswhere when needed.
