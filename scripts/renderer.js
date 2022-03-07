@@ -85,8 +85,8 @@ class Renderer
             //if the value at this.display[i] == 1, then draw a pixel
             if (this.display[i])
             {
-                //sets pixel colour to black
-                this.ctx.fillStyle = '#000';
+                //sets pixel colour
+                this.ctx.fillStyle = '#00ff33';
 
                 //place a pixel at poisiotn (x,y) with a width and height scale
                 this.ctx.fillRect(x,y, this.scale, this.scale)
