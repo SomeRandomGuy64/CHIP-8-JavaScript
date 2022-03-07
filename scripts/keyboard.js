@@ -38,6 +38,25 @@ class Keyboard
         return this.keysPressed[keyCode];
     }
 
+    //go back to this, don't fully understand yet, same with onKeyUp()
+    onKeyDown(event)
+    {
+        let key = this.KEYMAP[event.which];
+        this.keysPressed[key] = true;
+
+        if(this.onNextKeyPress !== null & key)
+        {
+            this.onNextKeyPress(parseInt(key));
+            this.onNextKeyPress = null;
+        }
+    }
+
+    onKeyUp(event)
+    {
+        let key = this.KEYMAP[event.which];
+        this.keysPressed[key] = false;
+    }
+
 }
 
 export default Keyboard;
