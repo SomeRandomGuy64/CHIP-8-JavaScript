@@ -14,3 +14,5 @@ class Speaker
         this.gain.connect(this.finish);
     }
 }
+
+export default Speaker;
