@@ -1,6 +1,8 @@
 import Renderer from "./renderer.js";
+import Keyboard from './keyboard.js';
 
 const renderer = new Renderer(10);
+const keyboard = new Keyboard();
 
 //creating a loop which runs at 60hz, isn't CHIP-8 specific (come back to later in other projects if needed)
 let loop;
