@@ -14,8 +14,8 @@ function init()
     startTime = then;
 
     //Testing code - remove when done
-    renderer.testRender();
-    renderer.render();
+    //renderer.testRender();
+    //renderer.render();
     //end test
 
     loop = requestAnimationFrame(step);
