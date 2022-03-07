@@ -46,6 +46,20 @@ class Speaker
             this.oscillator.start();
         }
     }
+
+    //stop sound
+    stop()
+    {
+        if (this.oscillator)
+        {   
+            //stop sound
+            this.oscillator.stop();
+            //disconnect sound
+            this.oscillator.disconnect();
+            //sets sound to null in order for play() to reinitialize it
+            this.oscillator = null;
+        }
+    }
 }
 
 export default Speaker;
