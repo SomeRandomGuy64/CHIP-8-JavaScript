@@ -71,7 +71,32 @@ class CPU
         }
     }
 
-    
+    loadROM(romName)
+    {
+        var request = new XMLHttpRequest;
+        var self = this;
+
+        //Handles the response recieves from sending (request.send()) our request
+        request.onload = function()
+        {
+            //If the request response has content
+            if (request.response)
+            {
+                //Store the contents of the response in an 8-bit array
+                let program = new Uint8Array(request.response);
+
+                //load the ROM into memory
+                slef.loadProgramIntoMemory(program);
+            }
+        }
+
+        //Initialize a GET request to retrieve the ROM from the roms folder
+        request.open('GET', 'roms/' + romName);
+        request.responseType = 'arraybuffer';
+
+        //send the GET request
+        request.send();
+    }
 }
 
 export default CPU;
