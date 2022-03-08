@@ -154,6 +154,14 @@ class CPU
         //Increment the program counter to prepare it for the next instruction
         //Each instruction is 2 bytes long, so increment it by 2.
         this.pc += 2;
+
+        //We only need the second nibble, so grab the value of the 2nd nibble
+        //and shift it right 8 bits to get rid of everything but that 2nd nibble
+        let x = (opcode & 0x0F00) >> 8;
+
+        //we only need the 3rd nibble, so grab the value of the 3rd nibble
+        //and shift it right 4 bits to get rid of everything but that 3rd nibble
+        let y = (opcode & 0xF00) >> 4;
     }
 }
 
