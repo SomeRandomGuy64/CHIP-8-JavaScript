@@ -61,6 +61,17 @@ class CPU
             this.memory[i] = sprites[i];
         }
     }
+
+    loadProgramIntoMemory(program)
+    {
+        //loop through the contents of the ROM and stores it in memory starting from 0x200
+        for (let loc = 0; loc< program.length; loc++)
+        {
+            this.memory[0x200 + loc] = program[loc];
+        }
+    }
+
+    
 }
 
 export default CPU;
