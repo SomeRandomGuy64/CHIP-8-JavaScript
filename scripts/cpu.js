@@ -131,7 +131,17 @@ class CPU
         }
     }
 
-    
+    playSound()
+    {
+        if(this,this.soundTimer > 0)
+        {
+            this.speaker.play(440);
+        }
+        else
+        {
+            this.speaker.stop();
+        }
+    }
 }
 
 export default CPU;
