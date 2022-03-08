@@ -117,7 +117,21 @@ class CPU
 
         this.playSound();
         this.renderer.render();
-    }    
+    }
+    
+    updateTimers()
+    {
+        if (this.delayTimer > 0)
+        {
+            this.delayTimer -=1;
+        }
+        if (this.soundTimer > 0)
+        {
+            this.soundTimer -=1;
+        }
+    }
+
+    
 }
 
 export default CPU;
