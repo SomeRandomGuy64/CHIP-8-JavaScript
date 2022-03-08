@@ -142,6 +142,19 @@ class CPU
             this.speaker.stop();
         }
     }
+
+    //nnn or addr - A 12-bit value, the lowest 12 bits of the instruction
+    //n or nibble - A 4-bit value, the lowest 4 bits of the instruction
+    //x - A 4-bit value, the lower 4 bits of the high byte of the instruction
+    //y - A 4-bit value, the upper 4 bits of the low byte of the instruction
+    //kk or byte - An 8-bit value, the lowest 8 bits of the instruction
+
+    executeInstruction(opcode)
+    {
+        //Increment the program counter to prepare it for the next instruction
+        //Each instruction is 2 bytes long, so increment it by 2.
+        this.pc += 2;
+    }
 }
 
 export default CPU;
