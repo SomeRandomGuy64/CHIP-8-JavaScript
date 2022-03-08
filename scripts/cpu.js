@@ -97,6 +97,8 @@ class CPU
         //send the GET request
         request.send();
     }
+
+    
 }
 
 export default CPU;
