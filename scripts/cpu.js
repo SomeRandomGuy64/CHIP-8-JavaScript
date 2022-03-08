@@ -98,7 +98,26 @@ class CPU
         request.send();
     }
 
-    
+    cycle()
+    {
+        for (let i = 0; i < this.speed; i++)
+        {
+            //If the emulator isn't paused
+            if (!this.paused)
+            {
+                let opcode = (this.memory[this.pc] << 8 | this.memory[this.pc + 1]);
+                this.executeInstruction(opcode);
+            }
+        }
+
+        if (!this.pause)
+        {
+            this.updateTimers();
+        }
+
+        this.playSound();
+        this.renderer.render();
+    }    
 }
 
 export default CPU;
