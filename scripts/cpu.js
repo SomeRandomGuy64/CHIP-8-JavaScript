@@ -161,7 +161,7 @@ class CPU
 
         //we only need the 3rd nibble, so grab the value of the 3rd nibble
         //and shift it right 4 bits to get rid of everything but that 3rd nibble
-        let y = (opcode & 0xF00) >> 4;
+        let y = (opcode & 0x00F0) >> 4;
 
 
         //return to this later
