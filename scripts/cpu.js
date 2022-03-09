@@ -16,7 +16,7 @@ class CPU
         this.i = 0;
 
         //Timers
-        this.delayTime = 0;
+        this.delayTimer = 0;
         this.soundTimer = 0;
 
         //Program counter. Stores the currently executing address
