@@ -164,11 +164,14 @@ class CPU
         let y = (opcode & 0xF00) >> 4;
 
 
-        
+
         switch (opcode & 0xF000) {
+            //ignore this opcode
             case 0x0000:
                 switch (opcode) {
+                    //clear the display
                     case 0x00E0:
+                        this.renderer.clear()
                         break;
                     case 0x00EE:
                         break;
