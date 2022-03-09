@@ -27,7 +27,7 @@ class Speaker
     }
 
     //method to play a sound at a desired frequency
-    playFrequency()
+    play(frequency)
     {
         if (this.audioCtx && !this.oscillator)
         {
