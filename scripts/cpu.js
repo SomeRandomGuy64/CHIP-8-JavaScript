@@ -218,7 +218,7 @@ class CPU
                         this.v[x] = this.v[y];
                         break;
                     case 0x1:
-                        this.v[x] != this.v[y];
+                        this.v[x] |= this.v[y];
                         break;
                     case 0x2:
                         this.v[x] &= this.v[y];
