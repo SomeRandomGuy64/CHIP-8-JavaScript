@@ -315,6 +315,7 @@ class CPU
                     }
                 }
                 break;
+                //possible bug here?
             case 0xE000:
                 switch (opcode & 0xFF) {
                     case 0x9E:
