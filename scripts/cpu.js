@@ -180,7 +180,9 @@ class CPU
                 }
         
                 break;
+            //set the program counter to the value stored in nnn
             case 0x1000:
+                this.pc = (opcode & 0xFFF);
                 break;
             case 0x2000:
                 break;
