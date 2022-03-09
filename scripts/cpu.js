@@ -195,7 +195,7 @@ class CPU
                 }
                 break;
             case 0x4000:
-                if (this.v[x] !== (opcode & oxFF))
+                if (this.v[x] !== (opcode & 0xFF))
                 {
                     this.pc += 2;
                 }
