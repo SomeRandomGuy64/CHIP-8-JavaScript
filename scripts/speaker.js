@@ -1,6 +1,6 @@
 class Speaker
 {
-    contructor()
+    constructor()
     {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
 
