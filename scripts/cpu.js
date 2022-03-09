@@ -364,7 +364,7 @@ class CPU
                         this.memory[this.i] = parseInt(this.v[x] / 100);
 
                         //Get tens digit and place it in i+1. Gets a value between 0 and 99 then divides by 10 to give a value between 0 and 9
-                        this.memory[this.i + 2] = parseInt(this.v[x] % 100 / 10);
+                        this.memory[this.i + 1] = parseInt(this.v[x] % 100 / 10);
 
                         //Get the value of the ones (last) digit and place it in i+2
                         this.memory[this.i + 2] = parseInt(this.v[x] % 10);
