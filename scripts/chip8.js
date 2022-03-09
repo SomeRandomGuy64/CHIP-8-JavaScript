@@ -1,10 +1,12 @@
 import Renderer from "./renderer.js";
 import Keyboard from './keyboard.js';
 import Speaker from './speaker.js';
+import CPU from './cpu.js';
 
 const renderer = new Renderer(20);
 const keyboard = new Keyboard();
 const speaker = new Speaker();
+const cpu = new CPU(renderer, keyboard, speaker);
 
 //creating a loop which runs at 60hz, isn't CHIP-8 specific (come back to later in other projects if needed)
 let loop;
