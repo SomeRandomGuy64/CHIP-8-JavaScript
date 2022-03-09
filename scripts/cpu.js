@@ -173,7 +173,9 @@ class CPU
                     case 0x00E0:
                         this.renderer.clear()
                         break;
+                    //pop the last element in the stack and store it in this.pc
                     case 0x00EE:
+                        this.pc = this.stack.pop();
                         break;
                 }
         
