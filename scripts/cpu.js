@@ -210,26 +210,62 @@ class CPU
                 this.v[x] = (opcode & 0xFF);
                 break;
             case 0x7000:
+                this.v[x] += (opcode & 0xFF);
                 break;
             case 0x8000:
                 switch (opcode & 0xF) {
                     case 0x0:
+                        this.v[x] = this.v[y];
                         break;
                     case 0x1:
+                        this.v[x] != this.v[y];
                         break;
                     case 0x2:
+                        this.v[x] &= this.v[y];
                         break;
                     case 0x3:
+                        this.v[x] ^= this.v[y];
                         break;
                     case 0x4:
+                        let sum = (this.v[x] += this.v[y]);
+
+                        this.v[0xF] = 0;
+
+                        if (sum > 0xFF)
+                            {
+                                this.v[0xF] = 1;
+                            }
+
+                            this.v[x] = sum;
                         break;
                     case 0x5:
+                        this.v[0xF] = 0;
+
+                        if (this.v[x] > this.v[y])
+                        {
+                            this.v[0xF] = 1;
+                        }
+
+                        this.v[x] -= this.v[y];
                         break;
                     case 0x6:
+                        this.v[0xF] = (this.v[x] & 0x1)
+
+                        this.v[x] >>= 1;
                         break;
                     case 0x7:
+                        this.v[0xF] = 0;
+
+                        if (this.v[y] > this.v[x])
+                        {
+                            this.v[0xF] = 1;
+                        }
+
+                        this.v[x] = this.v[y] - this.v[x];
                         break;
                     case 0xE:
+                        this.v[0xF] = (this.v[x] & 0x80);
+                        this.v[x] <<= 1;
                         break;
                 }
         
