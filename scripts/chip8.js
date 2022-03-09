@@ -24,7 +24,7 @@ function init()
     //renderer.render();
     //end test
 
-    cpu.loadProgramIntoMemory();
+    cpu.loadSpritesIntoMemory();
     cpu.loadROM('BLITZ');
     loop = requestAnimationFrame(step);
 }
