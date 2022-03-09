@@ -164,7 +164,7 @@ class CPU
         let y = (opcode & 0xF00) >> 4;
 
 
-
+        //return to this later
         switch (opcode & 0xF000) {
             //ignore this opcode
             case 0x0000:
@@ -185,14 +185,29 @@ class CPU
                 this.pc = (opcode & 0xFFF);
                 break;
             case 0x2000:
+                this.stack.push(this.pc);
+                this.pc = (opcode & 0xFFF);
                 break;
             case 0x3000:
+                if (this.v[x] === (opcode & 0xFF))
+                {
+                    this.pc += 2;
+                }
                 break;
             case 0x4000:
+                if (this.v[x] !== (opcode & oxFF))
+                {
+                    this.pc += 2;
+                }
                 break;
             case 0x5000:
+                if (this.v[x] === this.v[y])
+                {
+                    this.pc +=2;
+                }
                 break;
             case 0x6000:
+                this.v[x] = (opcode & 0xFF);
                 break;
             case 0x7000:
                 break;
