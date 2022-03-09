@@ -249,7 +249,7 @@ class CPU
                         this.v[x] -= this.v[y];
                         break;
                     case 0x6:
-                        this.v[0xF] = (this.v[x] & 0x1)
+                        this.v[0xF] = (this.v[x] & 0x1);
 
                         this.v[x] >>= 1;
                         break;
@@ -285,7 +285,7 @@ class CPU
             case 0xC000:
                 let rand = Math.floor(Math.random() * 0xFF);
 
-                this.v[x] = rand & (opcode & oxFF);
+                this.v[x] = rand & (opcode & 0xFF);
                 break;
             case 0xD000:
                 let width = 8;
