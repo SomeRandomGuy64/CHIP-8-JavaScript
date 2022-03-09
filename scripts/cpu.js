@@ -133,7 +133,7 @@ class CPU
 
     playSound()
     {
-        if(this,this.soundTimer > 0)
+        if(this.soundTimer > 0)
         {
             this.speaker.play(440);
         }
