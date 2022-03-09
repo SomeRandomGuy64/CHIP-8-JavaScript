@@ -86,7 +86,7 @@ class CPU
                 let program = new Uint8Array(request.response);
 
                 //load the ROM into memory
-                slef.loadProgramIntoMemory(program);
+                self.loadProgramIntoMemory(program);
             }
         }
 
