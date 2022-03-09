@@ -25,7 +25,7 @@ function init()
     //end test
 
     cpu.loadSpritesIntoMemory();
-    cpu.loadROM('BLITZ');
+    cpu.loadROM('BLINKY');
     loop = requestAnimationFrame(step);
 }
 
