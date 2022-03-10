@@ -5,6 +5,7 @@ class CPU
         this.renderer = renderer;
         this.keyboard = keyboard;
         this.speaker = speaker;
+        this.speed = speed;
 
         //4KB of memory
         this.memory = new Uint8Array(4096);
