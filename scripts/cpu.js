@@ -1,6 +1,6 @@
 class CPU
 {
-    constructor(renderer, keyboard, speaker)
+    constructor(renderer, keyboard, speaker, speed)
     {
         this.renderer = renderer;
         this.keyboard = keyboard;
@@ -27,8 +27,6 @@ class CPU
 
         //some instructions require pausing such as Fx0A
         this.paused = false;
-
-        this.speed = 10;
     }
 
     loadSpritesIntoMemory()
